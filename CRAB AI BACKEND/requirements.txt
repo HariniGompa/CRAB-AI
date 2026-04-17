@@ -1,0 +1,35 @@
+# CRAB AI Backend — Python dependencies
+# Install with: pip install -r requirements.txt
+
+# ── Core framework ────────────────────────────────────────────────────────────
+fastapi==0.115.0
+uvicorn[standard]==0.30.0
+
+# ── Database (SQLite — no extra driver needed) ────────────────────────────────
+sqlalchemy==2.0.36
+# NOTE: psycopg2 removed — we use SQLite for local dev (zero install required)
+# If you ever switch to PostgreSQL, install: pip install psycopg2-binary
+
+# ── Authentication & security ─────────────────────────────────────────────────
+PyJWT==2.8.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.9
+
+# ── Data validation ───────────────────────────────────────────────────────────
+pydantic==2.9.0
+pydantic-settings==2.5.0
+
+# ── File handling ─────────────────────────────────────────────────────────────
+aiofiles==23.2.1
+python-docx==1.1.0
+PyPDF2==3.0.1
+
+# ── HTTP client (for Gemini AI API) ──────────────────────────────────────────
+httpx==0.27.0
+
+# ── Email (optional — only needed if SMTP is configured) ─────────────────────
+aiosmtplib==3.0.1
+jinja2==3.1.4
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+python-dotenv==1.0.0
